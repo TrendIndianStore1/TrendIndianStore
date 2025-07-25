@@ -7,6 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <h2>Search Products</h2>
+<input type="text" id="search" placeholder="Search Products" onkeyup="searchProduct()" />
+<ul id="productList">
+  <li>Red T-Shirt</li>
+  <li>Black Hoodie</li>
+  <li>Green Kurti</li>
+</ul>
+
+<script>
+  function searchProduct() {
+    const input = document.getElementById('search').value.toLowerCase();
+    const items = document.querySelectorAll('#productList li');
+    items.forEach(item => {
+      item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+    });
+  }
+</script>
+
   <header>
     <h1>Welcome to Trend Indian Store</h1>
     <nav>
