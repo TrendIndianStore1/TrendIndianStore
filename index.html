@@ -7,6 +7,34 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+<!-- Slider Section -->
+<div class="swiper mySwiper" style="width:100%; max-width:1000px; margin:auto; padding:20px 0;">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://via.placeholder.com/1000x400?text=New+Collection+1" style="width:100%"/></div>
+    <div class="swiper-slide"><img src="https://via.placeholder.com/1000x400?text=New+Arrivals+2" style="width:100%"/></div>
+    <div class="swiper-slide"><img src="https://via.placeholder.com/1000x400?text=Trendy+Style+3" style="width:100%"/></div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
   <h2>Search Products</h2>
 <input type="text" id="search" placeholder="Search Products" onkeyup="searchProduct()" />
 <ul id="productList">
